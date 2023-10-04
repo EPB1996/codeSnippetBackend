@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "651d7770781d43af34234046"
+  },
+  "title": "tester",
+  "description": "Test",
+  "snippets": [
+    {
+      "id": "newID",
+      "code": "print(hell0)",
+      "description": "Well look at it"
+    },
+    {
+      "code": "WHat",
+      "description": "Well look at it",
+      "id": "newID"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "651d8780781d43af34234048"
+  },
+  "title": "tester",
+  "description": "Test",
+  "snippets": [
+    {
+      "id": "newID",
+      "code": "print(hell0)",
+      "description": "Well look at it"
+    }
+  ]
+}]
