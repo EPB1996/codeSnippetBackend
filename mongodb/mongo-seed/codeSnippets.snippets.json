@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "651eec0ba60ba5e9799dd4f8"
+  },
+  "code": "Tester Code",
+  "description": "Code Description",
+  "explanation":"explanation",
+  "tags": [
+    "tag4",
+    "tag5"
+  ],
+  "courseId": "651eec98a36500382545fc53"
+},
+{
+  "_id": {
+    "$oid": "651eecb0a36500382545fc54"
+  },
+  "code": "another one",
+  "description": "what",
+  "tags": [
+    "asdf",
+    "taadsfadsfg5"
+  ],
+  "explanation":"explanation",
+  "courseId": "651eec98a36500382545fc53"
+}]

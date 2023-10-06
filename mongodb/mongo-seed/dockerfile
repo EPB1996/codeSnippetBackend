@@ -1,4 +1,9 @@
 FROM mongo
 
-COPY init.json /init.json
-CMD mongoimport --host mongodb --db codeSnippets --collection course --type json --file /init.json --jsonArray
+COPY codeSnippets.course.json /codeSnippets.course.json
+COPY codeSnippets.snippets.json /codeSnippets.snippets.json
+COPY seed.sh /seed.sh
+
+RUN chmod +x seed.sh
+
+CMD ["sh", "-c", "/seed.sh"]
