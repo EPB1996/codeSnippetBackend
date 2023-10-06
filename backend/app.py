@@ -16,7 +16,6 @@ courses_collection = db['course']
 snippets_collection = db["snippets"]
 
 # models
-
 course_model = api.model('Course', {
     'title': fields.String(required=True, description='Course name'),
     'description': fields.String(required=True, description='Course description')
@@ -27,9 +26,7 @@ snippet_model = api.model('Snippet', {
     'code': fields.String(required=True, description='Snippet code'),
     'explanation': fields.String(required=True, description='Snippet Code explanation'),
     'courseId': fields.String(required=True, description='Snippet Course Association'),
-    'tags': fields.List(fields.String),
-
-
+    'tags': fields.List(fields.String)
 })
 
 
