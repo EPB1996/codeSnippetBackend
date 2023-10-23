@@ -14,6 +14,7 @@ client = MongoClient('mongodb://mongodb:27017/')
 db = client['codeSnippets']
 courses_collection = db['course']
 snippets_collection = db["snippets"]
+comments_collection = db["comments"]
 
 # models
 course_model = api.model('Course', {
@@ -27,6 +28,14 @@ snippet_model = api.model('Snippet', {
     'explanation': fields.String(required=True, description='Snippet Code explanation'),
     'courseId': fields.String(required=True, description='Snippet Course Association'),
     'tags': fields.List(fields.String)
+})
+
+comment_model = api.model("comment", {
+    "user_name": fields.String(required=True, description="Comment creator"),
+    "date": fields.String(required=True, description="Comment date"),
+    "comment": fields.String(required=True, description="Comment"),
+    "snippet_id": fields.String(required=True, description="Comment"),
+
 })
 
 
@@ -86,24 +95,6 @@ class Course(Resource):
             return {'message': 'Course not found'}, 404
 
 
-def getCodeSnippetsForCourse(course_id):
-    query = {"courseId": course_id}
-    snippets = list(snippets_collection.find(
-        query))
-
-    snippets_list = []
-    for snippet in snippets:
-        snippets_list.append({
-            'id': str(snippet['_id']),
-            'code': snippet['code'],
-            "explanation": snippet["explanation"],
-            'description': snippet['description'],
-            'tags': snippet['tags'],
-        })
-
-    return snippets_list
-
-
 # SNIPPETS
 @api.route('/snippets')
 class Snippets(Resource):
@@ -111,13 +102,15 @@ class Snippets(Resource):
         snippets = list(snippets_collection.find())
         snippets_list = []
         for snippet in snippets:
+            comments = getComments(str(snippet['_id']))
             snippets_list.append({
                 'id': str(snippet['_id']),
                 'code': snippet['code'],
                 "explanation": snippet["explanation"],
                 'description': snippet['description'],
                 'tags': snippet['tags'],
-                'courseId': snippet["courseId"]
+                'courseId': snippet["courseId"],
+                'comments': comments
             })
 
         return jsonify(snippets_list)
@@ -143,18 +136,21 @@ class Snippets(Resource):
 
 @api.route('/snippets/<string:snippet_id>')
 class Snippets(Resource):
+
     @api.doc(params={'snippet_id': 'A snippet ID'})
     def get(self, snippet_id):
         try:
             snippet = snippets_collection.find_one(
                 {"_id": ObjectId(snippet_id)})
             if snippet:
+                comments = getComments(snippet_id)
                 snippet_to_return = {
                     'id': str(snippet['_id']),
                     'code': snippet['code'],
                     'description': snippet['description'],
                     'tags': snippet['tags'],
-                    'courseId': snippet["courseId"]
+                    'courseId': snippet["courseId"],
+                    "comments": comments
                 }
 
                 return snippet_to_return, 200
@@ -162,6 +158,77 @@ class Snippets(Resource):
                 return {"message": "Snippet not found"}, 404
         except Exception as e:
             return {"message": str(e)}, 500
+
+
+# Comments
+
+
+@api.route('/comments')
+class Comments(Resource):
+    def get(self):
+        comments = list(comments_collection.find())
+        comments_list = []
+        for comment in comments:
+            comments_list.append({
+                'id': str(comment['_id']),
+                'user_name': comment['user_name'],
+                "date": comment["date"],
+                'comment': comment['comment'],
+                'snippet_id': comment["snippet_id"]
+            })
+
+        return jsonify(comments_list)
+
+    @api.expect(comment_model)
+    def post(self):
+        data = request.get_json()
+
+        # Ensure the "code" and "description" fields are present in the request data
+        if 'user_name' not in data or 'comment' not in data:
+            return {"message": "'user_name','comment' are required."}, 400
+
+        snippet = snippets_collection.find_one(
+            {"_id": ObjectId(data["snippet_id"])})
+
+        if (snippet):
+            # Insert the new comment into the collection
+            result = comments_collection.insert_one(data)
+            return {"message": "Comment created successfully", "id": str(result.inserted_id)}, 201
+        else:
+            return {"message": "Snippet Id is not valid", "snippet_id": str(data["snippet_id"])}, 404
+
+
+def getCodeSnippetsForCourse(course_id):
+    query = {"courseId": course_id}
+    snippets = list(snippets_collection.find(
+        query))
+
+    snippets_list = []
+    for snippet in snippets:
+        comments = getComments(str(snippet['_id']))
+        snippets_list.append({
+            'id': str(snippet['_id']),
+            'code': snippet['code'],
+            "explanation": snippet["explanation"],
+            'description': snippet['description'],
+            'tags': snippet['tags'],
+            'comments': comments
+        })
+
+    return snippets_list
+
+
+def getComments(snippet_id: str):
+    comments = comments_collection.find({"snippet_id": snippet_id})
+    if comments:
+        comments_to_return = [{
+            "comment_id": str(comment["_id"]),
+            "user_name": comment["user_name"],
+            "date":comment["date"],
+            "comment":comment["comment"],
+            "snippet_id":comment["snippet_id"],
+        } for comment in comments]
+    return comments_to_return
 
 
 if __name__ == '__main__':

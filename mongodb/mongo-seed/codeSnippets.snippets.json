@@ -2,12 +2,12 @@
   "_id": {
     "$oid": "651eec0ba60ba5e9799dd4f8"
   },
-  "code": "Tester Code",
-  "description": "Code Description",
-  "explanation":"explanation",
+  "code": "console.log('hello');",
+  "description": "Snippet description",
+  "explanation":"Snippet explanation",
   "tags": [
-    "tag4",
-    "tag5"
+    "basics",
+    "JS"
   ],
   "courseId": "651eec98a36500382545fc53"
 },
@@ -15,12 +15,12 @@
   "_id": {
     "$oid": "651eecb0a36500382545fc54"
   },
-  "code": "another one",
-  "description": "what",
+  "code": "const test = 3; \n test += 3; \n console.log(test);",
+  "description": "Just some additions.",
   "tags": [
-    "asdf",
-    "taadsfadsfg5"
+    "JS",
+    "basics"
   ],
-  "explanation":"explanation",
+  "explanation":"Creates a variable test. test is incremented by 3 and printed.",
   "courseId": "651eec98a36500382545fc53"
 }]

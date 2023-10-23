@@ -2,6 +2,7 @@ FROM mongo
 
 COPY codeSnippets.course.json /codeSnippets.course.json
 COPY codeSnippets.snippets.json /codeSnippets.snippets.json
+COPY codeSnippets.comments.json /codeSnippets.comments.json
 COPY seed.sh /seed.sh
 
 RUN chmod +x seed.sh
