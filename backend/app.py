@@ -93,7 +93,42 @@ class Course(Resource):
             return {'message': 'Course deleted'}
         else:
             return {'message': 'Course not found'}, 404
+    
+    @api.expect(course_model)
+    @api.doc(params={'course_id': 'A Course ID'})
+    def patch(self, course_id):
+        data = request.get_json()
 
+        if not data:
+            return {'message': 'Invalid input'}, 400
+
+        # Check for null values before patching
+        valid_fields = ['title', 'description']
+        update_data = {}
+        
+        for field in valid_fields:
+            if data.get(field) is not None:
+                update_data[field] = data[field]
+        
+        print(update_data)
+
+        result = courses_collection.update_one(
+            {'_id': ObjectId(course_id)},
+            {'$set': update_data}
+        )
+
+        if result.modified_count > 0:
+            updated_course = courses_collection.find_one({'_id': ObjectId(course_id)})
+            snippets_list = getCodeSnippetsForCourse(str(updated_course['_id']))
+
+            return jsonify({
+                'id': str(updated_course['_id']),
+                'title': updated_course['title'],
+                'description': updated_course['description'],
+                'snippets': snippets_list
+            })
+        else:
+            return {'message': 'Course not found'}, 404
 
 # SNIPPETS
 @api.route('/snippets')
@@ -149,6 +184,7 @@ class Snippets(Resource):
                     'code': snippet['code'],
                     'description': snippet['description'],
                     'tags': snippet['tags'],
+                    "explanation": snippet["explanation"],
                     'courseId': snippet["courseId"],
                     "comments": comments
                 }
@@ -158,6 +194,44 @@ class Snippets(Resource):
                 return {"message": "Snippet not found"}, 404
         except Exception as e:
             return {"message": str(e)}, 500
+
+    @api.expect(snippet_model)
+    @api.doc(params={'snippet_id': 'A snippet ID'})
+    def patch(self, snippet_id):
+        data = request.get_json()
+
+        if not data:
+            return {'message': 'Invalid input'}, 400
+
+        # Check for null values before patching
+        valid_fields = ['code', 'description', 'tags', "explanation"]
+        update_data = {}
+        
+        for field in valid_fields:
+            if data.get(field) is not None:
+                update_data[field] = data[field]
+
+        result = snippets_collection.update_one(
+            {'_id': ObjectId(snippet_id)},
+            {'$set': update_data}
+        )
+
+        if result.modified_count > 0:
+            updated_snippet = snippets_collection.find_one({'_id': ObjectId(snippet_id)})
+            comments = getComments(snippet_id)
+            snippet_to_return = {
+                'id': str(updated_snippet['_id']),
+                'code': updated_snippet['code'],
+                'description': updated_snippet['description'],
+                'tags': updated_snippet['tags'],
+                'courseId': updated_snippet["courseId"],
+                "explanation":updated_snippet["explanation"],
+                "comments": comments
+            }
+
+            return snippet_to_return
+        else:
+            return {'message': 'Snippet not found'}, 404
 
 
 # Comments
