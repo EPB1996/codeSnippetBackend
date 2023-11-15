@@ -1,8 +1,51 @@
-[{
-  "_id": {
-    "$oid": "651eec98a36500382545fc53"
+[
+  {
+    "_id": { "$oid": "651eecfda36500382545fc63" },
+    "title": "Angular Project - TP2",
+    "description": "Create an Angular project with customized header, footer, and interactive features."
   },
-  "title": "Course 1",
-  "description": "Course 1 Description"
-}
+  {
+    "_id": { "$oid": "651eecfda36500382545fc63" },
+    "title": "Angular Project - Exo2",
+    "description": "Create an Angular project with routing, navbar, footer, and various components."
+  },
+  {
+    "_id": { "$oid": "651eecfda36500382545fc5f" },
+    "title": "Angular Project TP1",
+    "description": "Create a new Angular project and implement specific features."
+  },
+  {
+    "_id": { "$oid": "651eecfda36500382545fc60" },
+    "title": "Git Project TP1",
+    "description": "Initialize a Git project with two names in the title and TP1."
+  },
+
+  {
+    "_id": { "$oid": "651eec98a36500382545fc53" },
+    "title": "Course 1",
+    "description": "Course 1 Description"
+  },
+
+  {
+    "_id": { "$oid": "651eeccca36500382545fc55" },
+    "title": "Python Data Analysis",
+    "description": "Learn data analysis with Python."
+  },
+
+  {
+    "_id": { "$oid": "651eecdea36500382545fc57" },
+    "title": "Scikit-learn Essentials",
+    "description": "Master the essentials of Scikit-learn for machine learning."
+  },
+
+  {
+    "_id": { "$oid": "651eeceea36500382545fc59" },
+    "title": "Web Front-end Development",
+    "description": "Build interactive and responsive user interfaces for the web."
+  },
+  {
+    "_id": { "$oid": "651eecfda36500382545fc5a" },
+    "title": "Angular Mastery",
+    "description": "Become proficient in Angular and its features."
+  }
 ]

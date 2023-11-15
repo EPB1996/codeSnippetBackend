@@ -1,26 +1,170 @@
-[{
-  "_id": {
-    "$oid": "651eec0ba60ba5e9799dd4f8"
+[
+  {
+    "_id": { "$oid": "651eec0ba60ba5e9799dd501" },
+    "code": "ng new jpnondedeoTP1",
+    "description": "Create a new Angular project.",
+    "explanation": "This command creates a new Angular project named 'jpnondedeoTP1'.",
+    "tags": ["Angular", "CLI", "Project"],
+    "courseId": "651eecfda36500382545fc63"
   },
-  "code": "console.log('hello');",
-  "description": "Snippet description",
-  "explanation":"Snippet explanation",
-  "tags": [
-    "basics",
-    "JS"
-  ],
-  "courseId": "651eec98a36500382545fc53"
-},
-{
-  "_id": {
-    "$oid": "651eecb0a36500382545fc54"
+  {
+    "_id": { "$oid": "651eecb0a36500382545fc68" },
+    "code": "git init",
+    "description": "Initialize a Git repository.",
+    "explanation": "This command initializes a new Git repository.",
+    "tags": ["Git", "Version Control"],
+    "courseId": "651eecfda36500382545fc63"
   },
-  "code": "const test = 3; \n test += 3; \n console.log(test);",
-  "description": "Just some additions.",
-  "tags": [
-    "JS",
-    "basics"
-  ],
-  "explanation":"Creates a variable test. test is incremented by 3 and printed.",
-  "courseId": "651eec98a36500382545fc53"
-}]
+  {
+    "_id": { "$oid": "651eecb0a36500382545fc69" },
+    "code": "<header style=\"background-color: violet; height: 50px;\"></header>",
+    "description": "Create a violet-colored header with a height of 50px.",
+    "explanation": "This snippet adds a header element with a violet background and a height of 50px.",
+    "tags": ["Angular", "Header"],
+    "courseId": "651eecfda36500382545fc63"
+  },
+  {
+    "_id": { "$oid": "651eecb0a36500382545fc6a" },
+    "code": "<footer style=\"background-color: orange; height: 50px;\"></footer>",
+    "description": "Create an orange-colored footer with a height of 50px.",
+    "explanation": "This snippet adds a footer element with an orange background and a height of 50px.",
+    "tags": ["Angular", "Footer"],
+    "courseId": "651eecfda36500382545fc63"
+  },
+  {
+    "_id": { "$oid": "651eecb0a36500382545fc6b" },
+    "code": "<div style=\"border: 1px solid black; width: 400px; height: 400px; margin: auto;\"><img src=\"path/to/windows-logo.png\" alt=\"Windows Logo\"></div>",
+    "description": "Create a centered square with a Windows logo inside.",
+    "explanation": "This snippet adds a centered div element with a black border, 400px width and height, and an embedded Windows logo image.",
+    "tags": ["Angular", "Styling", "Windows Logo"],
+    "courseId": "651eecfda36500382545fc63"
+  },
+  {
+    "_id": { "$oid": "651eec0ba60ba5e9799dd4fe" },
+    "code": "ng new jpnondedeoTP1",
+    "description": "Create a new Angular project.",
+    "explanation": "This command creates a new Angular project named 'jpnondedeoTP1'.",
+    "tags": ["Angular", "CLI", "Project"],
+    "courseId": "651eecfda36500382545fc5f"
+  },
+  {
+    "_id": { "$oid": "651eecb0a36500382545fc66" },
+    "code": "git init",
+    "description": "Initialize a Git repository.",
+    "explanation": "This command initializes a new Git repository.",
+    "tags": ["Git", "Version Control"],
+    "courseId": "651eecfda36500382545fc60"
+  },
+  {
+    "_id": { "$oid": "651eec0ba60ba5e9799dd4fd" },
+    "code": "npm install -g @angular/cli",
+    "description": "Install Angular CLI globally.",
+    "explanation": "This command installs the Angular CLI globally on your machine.",
+    "tags": ["Angular", "CLI", "Node.js"],
+    "courseId": "651eecfda36500382545fc5a"
+  },
+  {
+    "_id": { "$oid": "651eecb0a36500382545fc64" },
+    "code": "ng new my-first-project",
+    "description": "Create a new Angular project.",
+    "explanation": "This command generates a new Angular project named 'my-first-project'.",
+    "tags": ["Angular", "CLI", "Project"],
+    "courseId": "651eecfda36500382545fc5a"
+  },
+  {
+    "_id": { "$oid": "651eecb0a36500382545fc65" },
+    "code": "ng serve",
+    "description": "Start the development server.",
+    "explanation": "This command launches the Angular development server, making your app available at http://localhost:4200/",
+    "tags": ["Angular", "CLI", "Development"],
+    "courseId": "651eecfda36500382545fc5a"
+  },
+  {
+    "_id": { "$oid": "651eec0ba60ba5e9799dd501" },
+    "code": "<header>\n  <nav>\n    <a routerLink='/home'>Accueil</a>\n    <a routerLink='/list'>Liste</a>\n    <a routerLink='/management'>Gestion</a>\n  </nav>\n</header>",
+    "description": "Create a header with a navbar containing three categories.",
+    "explanation": "This snippet creates a header with a navigation bar that includes links for 'Accueil', 'Liste', and 'Gestion'.",
+    "tags": ["Angular", "Header", "Navbar"],
+    "courseId": "651eecfda36500382545fc63"
+  },
+  {
+    "_id": { "$oid": "651eecb0a36500382545fc68" },
+    "code": "<footer>\n  <a routerLink='/contact'>Contact</a>\n</footer>",
+    "description": "Create a footer with a link/button for contact.",
+    "explanation": "This snippet adds a contact link/button to the footer.",
+    "tags": ["Angular", "Footer", "Contact"],
+    "courseId": "651eecfda36500382545fc63"
+  },
+  {
+    "_id": { "$oid": "651eecb0a36500382545fc69" },
+    "code": "<div class='home'>\n  <img src='assets/meme.gif' alt='Favorite Meme'>\n</div>",
+    "description": "Create the home page with a centered meme image.",
+    "explanation": "This snippet adds a centered image or gif of a favorite meme to the home page.",
+    "tags": ["Angular", "Home Page", "Meme"],
+    "courseId": "651eecfda36500382545fc63"
+  },
+  {
+    "_id": { "$oid": "651eecb0a36500382545fc6a" },
+    "code": "<div class='list'>\n  <ul>\n    <li><a routerLink='/movie/1'>Movie 1</a></li>\n    <li><a routerLink='/movie/2'>Movie 2</a></li>\n    <li><a routerLink='/movie/3'>Movie 3</a></li>\n    <li><a routerLink='/movie/4'>Movie 4</a></li>\n    <li><a routerLink='/movie/5'>Movie 5</a></li>\n  </ul>\n</div>",
+    "description": "Create the list page with links to 5 favorite movies.",
+    "explanation": "This snippet adds a centered list of links to 5 favorite movies on the list page.",
+    "tags": ["Angular", "List Page", "Movies"],
+    "courseId": "651eecfda36500382545fc63"
+  },
+  {
+    "_id": { "$oid": "651eecb0a36500382545fc6b" },
+    "code": "<div class='movie-details'>\n  <h2>{{ movieTitle }}</h2>\n  <img [src]='moviePoster' alt='Movie Poster'>\n</div>",
+    "description": "Create a movie details page with the title and poster.",
+    "explanation": "This snippet adds a section below the movie list to display the title and poster of the selected movie.",
+    "tags": ["Angular", "Movie Details", "Movies"],
+    "courseId": "651eecfda36500382545fc63"
+  },
+  {
+    "_id": { "$oid": "651eecb0a36500382545fc6c" },
+    "code": "<div class='contact-form'>\n  <form>\n    <label for='firstName'>Prénom:</label>\n    <input type='text' id='firstName' name='firstName' required>\n    <label for='lastName'>Nom:</label>\n    <input type='text' id='lastName' name='lastName' required>\n    <label for='age'>Âge:</label>\n    <input type='number' id='age' name='age' required>\n    <input type='checkbox' id='hideEmail' name='hideEmail'>\n    <label for='email'>Email:</label>\n    <input type='email' id='email' name='email' required [hidden]='hideEmail'>\n    <label for='comment'>Commentaire:</label>\n    <textarea id='comment' name='comment' required></textarea>\n    <button type='button' [disabled]='!isFormValid' (click)='submitForm()'>Envoyer</button>\n  </form>\n</div>",
+    "description": "Create a contact page with a form.",
+    "explanation": "This snippet adds a centered form to the contact page with required fields and conditional email visibility.",
+    "tags": ["Angular", "Contact Page", "Form"],
+    "courseId": "651eecfda36500382545fc63"
+  },
+  {
+    "_id": { "$oid": "651eecb0a36500382545fc6d" },
+    "code": "<div class='management'>\n  <h2>Last Contact Information</h2>\n  <p *ngIf='lastContactInfo; else notFound'>\n    <strong>Prénom:</strong> {{ lastContactInfo.firstName }}<br>\n    <strong>Nom:</strong> {{ lastContactInfo.lastName }}<br>\n    <strong>Âge:</strong> {{ lastContactInfo.age }}<br>\n    <strong>Email:</strong> {{ lastContactInfo.email }}<br>\n    <strong>Commentaire:</strong> {{ lastContactInfo.comment }}<br>\n  </p>\n  <ng-template #notFound>\n    <img src='assets/404.png' alt='404 Not Found'>\n  </ng-template>\n</div>",
+    "description": "Create a management page with the last contact information.",
+    "explanation": "This snippet adds a section to the management page that displays the last contact information or a 404 image if no contact information is available.",
+    "tags": ["Angular", "Management Page", "Contact Information"],
+    "courseId": "651eecfda36500382545fc63"
+  },
+  {
+    "_id": { "$oid": "651eec0ba60ba5e9799dd4f8" },
+    "code": "console.log('hello');",
+    "description": "Snippet description",
+    "explanation": "Snippet explanation",
+    "tags": ["basics", "JS"],
+    "courseId": "651eec98a36500382545fc53"
+  },
+  {
+    "_id": { "$oid": "651eecb0a36500382545fc54" },
+    "code": "const test = 3; \n test += 3; \n console.log(test);",
+    "description": "Just some additions.",
+    "explanation": "Creates a variable test. test is incremented by 3 and printed.",
+    "tags": ["JS", "basics"],
+    "courseId": "651eec98a36500382545fc53"
+  },
+  {
+    "_id": { "$oid": "651eecdaa36500382545fc55" },
+    "code": "print('Hello, World!')",
+    "description": "Python Hello World",
+    "explanation": "Prints 'Hello, World!' to the console.",
+    "tags": ["basics", "Python"],
+    "courseId": "651eeccca36500382545fc55"
+  },
+  {
+    "_id": { "$oid": "651eecf7a36500382545fc5c" },
+    "code": "from sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\n\niris = load_iris()\nX_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.2)",
+    "description": "Split the Iris dataset into training and testing sets using Scikit-learn.",
+    "explanation": "This code snippet uses Scikit-learn to split the Iris dataset into training and testing sets.",
+    "tags": ["Scikit-learn", "machine learning"],
+    "courseId": "651eecdea36500382545fc57"
+  }
+]

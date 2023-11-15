@@ -1,9 +1,159 @@
-[{
-  "_id": {
-    "$oid": "653691eadf5f3a9b0410c306"
+[
+  {
+    "_id": { "$oid": "6536942adf5f3a9b0410c322" },
+    "user_name": "AngularDesigner",
+    "date": "14-11-2023",
+    "comment": "The Angular project with custom header, footer, and Windows logo looks fantastic!",
+    "snippet_id": "651eecb0a36500382545fc69"
   },
-  "user_name": "Test user",
-  "date": "23-10-2023",
-  "comment": "What nice code this is!!",
-  "snippet_id": "651eec0ba60ba5e9799dd4f8"
-}]
+  {
+    "_id": { "$oid": "6536943adf5f3a9b0410c323" },
+    "user_name": "GitCollaborator",
+    "date": "15-11-2023",
+    "comment": "Collaborating on the Git project. Pushing my changes now!",
+    "snippet_id": "651eecb0a36500382545fc68"
+  },
+
+  {
+    "_id": { "$oid": "6536953edf5f3a9b0410c326" },
+    "user_name": "Commenter2",
+    "date": "2023-11-19",
+    "comment": "Consider adding a logo to the header for a more branded look.",
+    "snippet_id": "651eec0ba60ba5e9799dd501"
+  },
+  {
+    "_id": { "$oid": "6536953edf5f3a9b0410c327" },
+    "user_name": "Commenter3",
+    "date": "2023-11-20",
+    "comment": "Clean and straightforward. Good choice for navigation.",
+    "snippet_id": "651eecb0a36500382545fc68"
+  },
+  {
+    "_id": { "$oid": "6536953edf5f3a9b0410c328" },
+    "user_name": "Commenter4",
+    "date": "2023-11-21",
+    "comment": "Hilarious! Memes always add a fun touch to the website.",
+    "snippet_id": "651eecb0a36500382545fc69"
+  },
+  {
+    "_id": { "$oid": "6536935adf5f3a9b0410c31b" },
+    "user_name": "AngularStarter",
+    "date": "07-11-2023",
+    "comment": "Just created my Angular project following the instructions. Excited to proceed!",
+    "snippet_id": "651eec0ba60ba5e9799dd4fe"
+  },
+  {
+    "_id": { "$oid": "6536936adf5f3a9b0410c31c" },
+    "user_name": "GitInitiator",
+    "date": "08-11-2023",
+    "comment": "Initialized a Git repository. Ready to commit my Angular project!",
+    "snippet_id": "651eecb0a36500382545fc66"
+  },
+  {
+    "_id": { "$oid": "6536937adf5f3a9b0410c31d" },
+    "user_name": "ColorClicker",
+    "date": "09-11-2023",
+    "comment": "Implemented the color-click feature successfully. It works like a charm!",
+    "courseId": "651eecfda36500382545fc5f",
+    "snippet_id": "651eecb0a36500382545fc64"
+  },
+  {
+    "_id": { "$oid": "6536938adf5f3a9b0410c31e" },
+    "user_name": "GitCollaborator",
+    "date": "10-11-2023",
+    "comment": "Collaborating on the Git project. Pushing my changes now!",
+    "courseId": "651eecfda36500382545fc60",
+    "snippet_id": "651eecb0a36500382545fc64"
+  },
+  {
+    "_id": { "$oid": "6536930adf5f3a9b0410c313" },
+    "user_name": "AngularBeginner",
+    "date": "02-11-2023",
+    "comment": "Just finished setting up my first Angular project. Exciting!",
+    "snippet_id": "651eecb0a36500382545fc64"
+  },
+  {
+    "_id": { "$oid": "6536931adf5f3a9b0410c314" },
+    "user_name": "CLI_User",
+    "date": "03-11-2023",
+    "comment": "The Angular CLI is a game-changer! It makes project setup so easy.",
+    "snippet_id": "651eec0ba60ba5e9799dd4fd"
+  },
+  {
+    "_id": { "$oid": "6536932adf5f3a9b0410c315" },
+    "user_name": "DevExplorer",
+    "date": "04-11-2023",
+    "comment": "Thanks for the ng serve command! Got my app running smoothly.",
+    "snippet_id": "651eecb0a36500382545fc65"
+  },
+  {
+    "_id": { "$oid": "653691eadf5f3a9b0410c306" },
+    "user_name": "Test user",
+    "date": "23-10-2023",
+    "comment": "What nice code this is!!",
+    "snippet_id": "651eec0ba60ba5e9799dd4f8"
+  },
+  {
+    "_id": { "$oid": "6536921adf5f3a9b0410c307" },
+    "user_name": "Another user",
+    "date": "24-10-2023",
+    "comment": "I learned a lot from this snippet.",
+    "snippet_id": "651eecdaa36500382545fc55"
+  },
+  {
+    "_id": { "$oid": "6536922adf5f3a9b0410c308" },
+    "user_name": "Pythonista",
+    "date": "25-10-2023",
+    "comment": "Great Python example! Simple and effective.",
+    "snippet_id": "651eecdaa36500382545fc55"
+  },
+  {
+    "_id": { "$oid": "6536923adf5f3a9b0410c309" },
+    "user_name": "WebDevPro",
+    "date": "26-10-2023",
+    "comment": "Express.js makes building APIs a breeze.",
+    "snippet_id": "651eecffa36500382545fc5d"
+  },
+  {
+    "_id": { "$oid": "6536924adf5f3a9b0410c30a" },
+    "user_name": "HTML_Coder",
+    "date": "27-10-2023",
+    "comment": "Simple and clean HTML structure. Well done!",
+    "snippet_id": "651eec0ba60ba5e9799dd4f9"
+  },
+  {
+    "_id": { "$oid": "6536925adf5f3a9b0410c30b" },
+    "user_name": "AngularEnthusiast",
+    "date": "28-10-2023",
+    "comment": "Angular @Input and @Output are game-changers. Thanks for the example!",
+    "snippet_id": "651eec0ba60ba5e9799dd4fa"
+  },
+  {
+    "_id": { "$oid": "6536926adf5f3a9b0410c30c" },
+    "user_name": "AngularPro",
+    "date": "29-10-2023",
+    "comment": "These advanced Angular snippets are gold! Learned a ton.",
+    "snippet_id": "651eec0ba60ba5e9799dd4fb"
+  },
+  {
+    "_id": { "$oid": "6536927adf5f3a9b0410c30d" },
+    "user_name": "DirectiveMaster",
+    "date": "30-10-2023",
+    "comment": "The custom directive example is exactly what I needed. Thanks!",
+    "snippet_id": "651eecb0a36500382545fc5f"
+  },
+  {
+    "_id": { "$oid": "6536928adf5f3a9b0410c30e" },
+    "user_name": "PipeExpert",
+    "date": "31-10-2023",
+    "comment": "The custom pipe snippet is so handy. Saved me a lot of time!",
+    "snippet_id": "651eecb0a36500382545fc60"
+  },
+  {
+    "_id": { "$oid": "6536929adf5f3a9b0410c30f" },
+    "user_name": "NgModuleMaster",
+    "date": "01-11-2023",
+    "comment": "Shared module example is a great practice. Well-explained!",
+    "snippet_id": "651eecb0a36500382545fc61"
+  }
+]
